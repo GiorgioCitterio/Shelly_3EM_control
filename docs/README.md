@@ -126,7 +126,5 @@ From MQTT, it could be observed
 
  that the data was sent every 30 seconds.
 Analyzing the JSON returned by Postman, it can be seen that the data is updated every 10 minutes as the `time` parameter varies by 10 minutes. If a request is sent within that 10-minute interval, the same previous data will be returned.
-[Database Screenshot](images/Screenshot%202023-06-15%20174510.png)
-![](images/Screenshot%202023-06-15%20103448.png)
 ![](images/Screenshot%202023-06-16%20092026.png)
 ![](images/Screenshot%202023-06-16%20093555.png)
