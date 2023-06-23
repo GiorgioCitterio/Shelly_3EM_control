@@ -1,5 +1,13 @@
 # Shelly 3 EM Control
 
+![GitHub all releases](https://img.shields.io/github/downloads/GiorgioCitterio/Shelly_3EM_control/total)
+![GitHub](https://img.shields.io/github/license/GiorgioCitterio/Shelly_3EM_control)
+![GitHub deployments](https://img.shields.io/github/deployments/GiorgioCitterio/Shelly_3EM_control/github-pages)
+![GitHub repo size](https://img.shields.io/github/repo-size/GiorgioCitterio/Shelly_3EM_control)
+![GitHub Repo stars](https://img.shields.io/github/stars/GiorgioCitterio/Shelly_3EM_control)
+
+---
+
 Questa documentazione illustra il funzionamento di un programma Python (<a href="./../src/ShellyEm_control.py">ShellyEm_control.py</a>) che sfrutta le API cloud di un dispositivo Shelly 3 EM per effettuare richieste cicliche e elaborare i dati misurati. Il programma memorizza i dati in un database PostgreSQL e include un'interfaccia grafica realizzata con Tkinter che consente di cercare lo Shelly ID e visualizzare i sensori attivati per la misurazione dei dati.
 
 ## Documentazione del programma Python per l'interazione con le API di Shelly 3EM e l'utilizzo di un database PostgreSQL tramite Python
