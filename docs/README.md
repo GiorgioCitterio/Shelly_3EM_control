@@ -1,6 +1,6 @@
 # Shelly 3 EM Control
 
-Questa documentazione illustra il funzionamento di un programma Python (<a href="./src/ShellyEm_control.py">ShellyEm_control.py</a>) che sfrutta le API cloud di un dispositivo Shelly 3 EM per effettuare richieste cicliche e elaborare i dati misurati. Il programma memorizza i dati in un database PostgreSQL e include un'interfaccia grafica realizzata con Tkinter che consente di cercare lo Shelly ID e visualizzare i sensori attivati per la misurazione dei dati.
+Questa documentazione illustra il funzionamento di un programma Python (<a href="./../src/ShellyEm_control.py">ShellyEm_control.py</a>) che sfrutta le API cloud di un dispositivo Shelly 3 EM per effettuare richieste cicliche e elaborare i dati misurati. Il programma memorizza i dati in un database PostgreSQL e include un'interfaccia grafica realizzata con Tkinter che consente di cercare lo Shelly ID e visualizzare i sensori attivati per la misurazione dei dati.
 
 ## Configurazione Iniziale
 
