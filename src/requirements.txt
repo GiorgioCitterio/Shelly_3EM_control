@@ -1,0 +1,8 @@
+requests
+schedule
+time
+json
+psycopg2
+config
+tkinter
+threading
