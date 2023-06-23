@@ -6,6 +6,12 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/GiorgioCitterio/Shelly_3EM_control)
 ![GitHub Repo stars](https://img.shields.io/github/stars/GiorgioCitterio/Shelly_3EM_control)
 
+<p align="left">
+  <a href="https://www.python.org" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40" style="margin: 5px;" />
+  </a>
+</p>
+
 ---
 
 Questa documentazione illustra il funzionamento di un programma Python (<a href="./../src/ShellyEm_control.py">ShellyEm_control.py</a>) che sfrutta le API cloud di un dispositivo Shelly 3 EM per effettuare richieste cicliche e elaborare i dati misurati. Il programma memorizza i dati in un database PostgreSQL e include un'interfaccia grafica realizzata con Tkinter che consente di cercare lo Shelly ID e visualizzare i sensori attivati per la misurazione dei dati.
