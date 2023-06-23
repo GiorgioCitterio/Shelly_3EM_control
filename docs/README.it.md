@@ -112,8 +112,6 @@ device id: your_device_id
 uri post prova: curl -X POST server_uri -d "id=device id&auth_key=auth key"
 ```
 
-![risposta api cloud](images/Screenshot%202023-06-14%20143337.png)
-
 Dopo aver provato a fare la richiesta da riga di comando, ho realizzato un programma python per fare la richiesta e salvare la risposta in un file json.
 
 Il dispositivo può scegliere se utilizzare o mqtt o cloud, entrambe le funzioni non possono essere utilizzate contemporaneamente.
@@ -122,7 +120,5 @@ Il dispositivo può scegliere se utilizzare o mqtt o cloud, entrambe le funzioni
 Scaricando il file csv del retain dei voltaggi in locale (vm_data.csv) si può vedere che vengono salvati i dati ogni minuto.
 Da MQTT si poteva vedere che i dati venivano spediti ogni 30 secondi.
 Analizzando il json restituito da postman si può vedere che i dati vengono aggiornati ogni 10 minuti infatti il parametro time varia di 10 minuti e se viene spedita una richesta nell'arco di quei 10 minuti ritornerà lo stessa la precedente.
-[foto db](images/Screenshot%202023-06-15%20174510.png)
-![](images/Screenshot%202023-06-15%20103448.png)
 ![](images/Screenshot%202023-06-16%20092026.png)
 ![](images/Screenshot%202023-06-16%20093555.png)
