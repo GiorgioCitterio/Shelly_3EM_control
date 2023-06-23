@@ -115,7 +115,6 @@ server uri: your_server_uri
 device id: your_device_id
 uri post test: curl -X POST server_uri -d "id=device id&auth_key=auth key"
 ```
-![Cloud API response](images/Screenshot%202023-06-14%20143337.png)
 
 After testing the request from the command line, I created a Python program to make the request and save the response to a JSON file.
 
