@@ -69,3 +69,65 @@ The program is divided into several functions to handle different phases of inte
 10. `main()`: Main function of the program. It handles establishing the database connection, creating tables, initializing the graphical interface, starting the cron job in a separate thread, and managing program exit.
 
 These are the main functions that make up the program and perform various operations such as database management, interaction with the Shelly APIs, and handling the graphical interface. This is an overview, and you can extend or modify the code to fit your specific needs.
+
+---
+
+## Initial Configuration
+
+Before using the program, you need to perform some initial configuration steps for the Shelly 3 EM device.
+
+1. Device Connection: Connect to the Wi-Fi network created by the Shelly 3 EM device, which also acts as an access point.
+2. Accessing the Web Interface: Open a browser and navigate to http://192.168.33.1/ to access the web interface of the Shelly 3 EM device. Here, you can view the measured values from the default interface.
+<img alt="Basic interface" src="./images/foto_interfaccia_base_shelly_3em.png">
+
+## Device Connection Modes
+
+The Shelly 3 EM device offers two connection modes: MQTT and Cloud. Only one mode can be used at a time.
+
+### MQTT Mode
+
+In MQTT mode, the device sends the measured data to specific MQTT topics. The following steps outline the configuration and testing of the MQTT mode:
+
+1. MQTT Configuration on the Device: Using the device's web interface, configure the MQTT settings by specifying the MQTT broker and its parameters such as IP address and port.
+2. Installation and Configuration of MQTT Broker: Install an MQTT broker on your system. In this example, Mosquitto broker is used. Configure the broker by specifying the desired settings such as IP address and port.
+3. Testing MQTT Connection: Use an MQTT client, such as MQTTX, to test the connection to the MQTT broker and verify if the data is being successfully sent to the specified topics.
+4. Data is sent via MQTT to the topics every 30 seconds.
+
+Enabling MQTT from Shelly:
+![MQTT configuration from Shelly](./images/FireShot%20Capture%20011%20-%20ShellyEM3%20-%20192.168.18.211.png)
+![Broker 1](./images/Screenshot%202023-06-14%20141107.png)
+![Broker 2](./images/Screenshot%202023-06-14%20141131.png)
+![Client 2](images/Screenshot%202023-06-14%20141220.png)
+![Client 2](images/Screenshot%202023-06-14%20141238.png)
+
+### Cloud Mode
+
+In Cloud mode, the Shelly 3 EM device sends the measured data to a cloud server using the manufacturer's cloud APIs. The following steps explain how to use the Cloud mode:
+
+1. Device Registration on the Cloud Server: Create an account on the manufacturer's cloud server and follow the instructions to register the Shelly 3 EM device. During registration, you will need to create a room and provide device information.
+2. Accessing Data and Device Control: After registering the device, you can access device information and control through the web interface or mobile app provided by the manufacturer.
+
+![Cloud Screenshot](images/FireShot%20Capture%20012%20-%20Shelly%20Home%20-%20home.shelly.cloud.png)
+Testing cloud API usage:
+```
+auth key: your_auth_key
+server uri: your_server_uri
+device id: your_device_id
+uri post test: curl -X POST server_uri -d "id=device id&auth_key=auth key"
+```
+![Cloud API response](images/Screenshot%202023-06-14%20143337.png)
+
+After testing the request from the command line, I created a Python program to make the request and save the response to a JSON file.
+
+The device can choose to use either MQTT or Cloud. Both functions cannot be used simultaneously.
+
+## Data Timing
+By downloading the local CSV file of retained voltages (`vm_data.csv`), you can see that the data is saved every minute.
+From MQTT, it could be observed
+
+ that the data was sent every 30 seconds.
+Analyzing the JSON returned by Postman, it can be seen that the data is updated every 10 minutes as the `time` parameter varies by 10 minutes. If a request is sent within that 10-minute interval, the same previous data will be returned.
+[Database Screenshot](images/Screenshot%202023-06-15%20174510.png)
+![](images/Screenshot%202023-06-15%20103448.png)
+![](images/Screenshot%202023-06-16%20092026.png)
+![](images/Screenshot%202023-06-16%20093555.png)
