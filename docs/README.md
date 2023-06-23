@@ -41,9 +41,7 @@ The program is divided into several functions to handle different phases of inte
 
 6. `tkinter_init()`: Function to initialize the graphical interface using the Tkinter library. It creates a main window and adds labels, input fields, and buttons for user interaction.
 
-7. `search()`: Function to search for a Shelly device in the database
-
- using the ID specified by the user in the graphical interface. It executes a query to check if the ID exists in the database and displays a dialog window with the search result.
+7. `search()`: Function to search for a Shelly device in the database using the ID specified by the user in the graphical interface. It executes a query to check if the ID exists in the database and displays a dialog window with the search result.
 
 8. `open_sensor_table_window()`: Function to open a separate window displaying the sensor table for a specific Shelly device. It retrieves sensor data from the database and creates checkboxes corresponding to the sensors in the window. It allows the user to modify the state of the checkboxes and apply or cancel the changes.
 
