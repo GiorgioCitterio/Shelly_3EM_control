@@ -1,5 +1,24 @@
 # Shelly 3 EM Control Documentation
 
+![GitHub all releases](https://img.shields.io/github/downloads/GiorgioCitterio/Shelly_3EM_control/total)
+![GitHub](https://img.shields.io/github/license/GiorgioCitterio/Shelly_3EM_control)
+![GitHub deployments](https://img.shields.io/github/deployments/GiorgioCitterio/Shelly_3EM_control/github-pages)
+![GitHub repo size](https://img.shields.io/github/repo-size/GiorgioCitterio/Shelly_3EM_control)
+![GitHub Repo stars](https://img.shields.io/github/stars/GiorgioCitterio/Shelly_3EM_control)
+
+<p align="left">
+  <a href="https://www.python.org" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40" style="margin: 5px;" />
+  </a>
+  <a href="https://www.postgresql.org" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40" style="margin: 5px;" />
+  </a>
+</p>
+
+<a href="https://github.com/GiorgioCitterio/Shelly_3EM_control/blob/master/docs/README.it.md">README it</a>
+
+---
+
 This documentation explains how to use a Python program called Shelly 3 EM Control (`ShellyEm_control.py`) that utilizes the cloud APIs of a Shelly 3 EM device to make periodic requests and process measured data. The program stores the data in a PostgreSQL database and includes a graphical interface built with Tkinter, which allows users to search for the Shelly ID and view activated sensors for data measurement.
 
 ## Python Program Documentation for Interacting with Shelly 3EM APIs and Using PostgreSQL Database via Python
