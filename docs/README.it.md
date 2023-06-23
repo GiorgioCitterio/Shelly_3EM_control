@@ -15,7 +15,7 @@
   </a>
 </p>
 
-<a href="https://github.com/GiorgioCitterio/Shelly_3EM_control/blob/master/docs/README.md">README us</a>
+<a href="https://github.com/GiorgioCitterio/Shelly_3EM_control/blob/master/docs/README.md">README.us 🇺🇸</a>
 
 ---
 
